@@ -1,5 +1,8 @@
 package dcll.iParser.iParser;
+import java.util.ArrayList;
+
 import org.junit.Test;
+
 import junit.framework.TestCase;
 
 public class QuestionTest extends TestCase {
@@ -32,18 +35,40 @@ public class QuestionTest extends TestCase {
 	
 	@Test
 	public void testReponseCorrecteMULTIPLE() {
-		assertEquals("Le ciel est une réponse correcte.", true, quizzSimple.resultOf("Le ciel"));
+		//la réponse doit etre considérée comme fausse du fait que la réponse est (le ciel,la mer)
+		//assertEquals("Le ciel est une réponse correcte.", true, quizzSimple.resultOf("Le ciel"));
+		
+		ArrayList<String> listReponse=new ArrayList<String>();
+		listReponse.add("Le ciel");
+		listReponse.add("La mer");
+		assertEquals("Le ciel est une réponse correcte.", true, quizzSimple.resultOf(listReponse));
 	} 
 	
 	@Test
 	public void testReponseFausseMULTIPLE() {
-		assertEquals("De l'herbe est une réponse fausse.", false, quizzSimple.resultOf("De l'herbe"));
+		ArrayList<String> listReponse=new ArrayList<String>();
+		listReponse.add("Le ciel");
+		assertEquals("Le ciel est une réponse fausse.", true, quizzSimple.resultOf(listReponse));
+	}
+	
+	@Test
+	public void testReponseFausseMULTIPLE2() {
+		ArrayList<String> listReponse=new ArrayList<String>();
+		listReponse.add("Le ciel");
+		assertEquals("De l'herbe est une réponse fausse.", false, quizzSimple.resultOf(listReponse));
 	}
 	
 	@Test
 	public void testAjoutReponse(){
 		this.quizzSimple.addReponse(new Reponse("Londres", false));
 		assertEquals("Il doit y avoir 3 réponses maintenant.", 3, quizzSimple.nbReponse());
+	}
+	
+	@Test
+	public void testAjoutReponseJusteAuQuizzSimple(){
+		this.quizzSimple.addReponse(new Reponse("Londres", true));
+		//Devrait générer un msg d'erreur
+		fail("On peut pas ajouter une autre reponse vraie");
 	}
 
 	@Test
@@ -63,6 +88,4 @@ public class QuestionTest extends TestCase {
 			assertEquals("La bonne réponse est Paris ou Toulouse", "Paris", quizzSimple.getReponseCorrecte());
 		}*/
 	}
-	
-	
 }
