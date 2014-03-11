@@ -25,7 +25,7 @@ public class QuestionTest extends TestCase {
 	
 	@Test
 	public void testAjoutReponse(){
-		this.quizzOne.addReponse("Londres", false);
+		this.quizzOne.addReponse(new Reponse("Londres", false));
 		assertEquals("Il doit y avoir 3 réponses maintenant.", 3, quizzOne.nbReponse());
 	}
 	
