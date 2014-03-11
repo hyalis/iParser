@@ -11,6 +11,7 @@ public class Question {
 	public Question(String text,TypeQuestion type){
 		texte=text;
 		this.type=type;
+		listReponses=new ArrayList<Reponse>();
 	}
 	
 	public void addReponse(Reponse reponse){
