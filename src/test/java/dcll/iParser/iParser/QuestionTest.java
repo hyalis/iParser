@@ -4,51 +4,64 @@ import junit.framework.TestCase;
 
 public class QuestionTest extends TestCase {
 
-	private Question quizzOne;
+	private Question quizzSimple;
+	private Question quizzMultiple;
 	
 	protected void setUp() throws Exception {
 		super.setUp();
-		this.quizzOne = new Question("Quelle est la capitale de la France ?");
-		this.quizzOne.addReponse(new Reponse("Paris", true));
-		this.quizzOne.addReponse(new Reponse("Madrid", false));
+		this.quizzSimple = new Question("Quelle est la capitale de la France ?", TypeQuestion.SIMPLE);
+		this.quizzSimple.addReponse(new Reponse("Paris", true));
+		this.quizzSimple.addReponse(new Reponse("Madrid", false));
+		
+		this.quizzMultiple = new Question("Qu'est ce qui est bleu ?", TypeQuestion.MULTIPLE);
+		this.quizzMultiple.addReponse(new Reponse("Voiture de La Poste", false));
+		this.quizzMultiple.addReponse(new Reponse("Le ciel", true));
+		this.quizzMultiple.addReponse(new Reponse("La mer", true));
+		this.quizzMultiple.addReponse(new Reponse("De l'herbe", false));
 	}
 	
 	@Test
-	public void testReponseCorrecte() {
-		assertEquals("Paris est une réponse correcte.", true, quizzOne.resultOf("Paris"));
+	public void testReponseCorrecteSIMPLE() {
+		assertEquals("Paris est une réponse correcte.", true, quizzSimple.resultOf("Paris"));
 	} 
 	
 	@Test
-	public void testReponseFausse() {
-		assertEquals("Madrid est une réponse fausse.", false, quizzOne.resultOf("Madrid"));
+	public void testReponseFausseSIMPLE() {
+		assertEquals("Madrid est une réponse fausse.", false, quizzSimple.resultOf("Madrid"));
+	}
+	
+	@Test
+	public void testReponseCorrecteMULTIPLE() {
+		assertEquals("Le ciel est une réponse correcte.", true, quizzSimple.resultOf("Le ciel"));
+	} 
+	
+	@Test
+	public void testReponseFausseMULTIPLE() {
+		assertEquals("De l'herbe est une réponse fausse.", false, quizzSimple.resultOf("De l'herbe"));
 	}
 	
 	@Test
 	public void testAjoutReponse(){
-		this.quizzOne.addReponse(new Reponse("Londres", false));
-		assertEquals("Il doit y avoir 3 réponses maintenant.", 3, quizzOne.nbReponse());
-	}
-	
-	@Test
-	public void testSupprimerReponse(){
-		this.quizzOne.delReponse("Madrid");
-		assertEquals("Il y a une réponse en moins. Plus que 2 réponses.", 2, quizzOne.nbReponse());
+		this.quizzSimple.addReponse(new Reponse("Londres", false));
+		assertEquals("Il doit y avoir 3 réponses maintenant.", 3, quizzSimple.nbReponse());
 	}
 
 	@Test
-	public void testNbReponsesCorrecteUne(){
-		assertEquals("Paris est la seule bonne réponse. Donc une seule réponse correcte.", 1, quizzOne.nbReponseCorrecte());
+	public void testNbReponsesCorrecteSIMPLE(){
+		assertEquals("Paris est la seule bonne réponse. Donc une seule réponse correcte.", 1, quizzSimple.nbReponseCorrecte());
 	}
 	
 	@Test
 	public void testNbReponsesCorrecteMultiple(){
-		this.quizzOne.addReponse("Toulouse", true);
-		assertEquals("Paris et Toulouse sont des bonne réponses. Donc deux réponses correctes", 2, quizzOne.nbReponseCorrecte());
+		this.quizzSimple.addReponse(new Reponse("Toulouse", true));
+		assertEquals("Paris et Toulouse sont des bonne réponses. Donc deux réponses correctes", 2, quizzSimple.nbReponseCorrecte());
 	}
 	
 	@Test
 	public void testGetReponse(){
-		assertEquals("La bonne réponse est Paris.", "Paris", quizzOne.getReponseCorrecte());
+		for(String rep : quizzSimple.getReponseCorrecte()){
+			assertEquals("La bonne réponse est Paris ou Toulouse", "Paris", quizzSimple.getReponseCorrecte());
+		}
 	}
 	
 	
