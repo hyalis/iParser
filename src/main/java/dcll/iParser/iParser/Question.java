@@ -5,13 +5,12 @@ import java.util.ArrayList;
 public class Question {
 
 	private String texte;
-	private ArrayList<Reponse> listReponses;
+	private ArrayList<Reponse> listReponses=new ArrayList<Reponse>();
 	private TypeQuestion type;
 	
 	public Question(String text,TypeQuestion type){
 		texte=text;
 		this.type=type;
-		listReponses=new ArrayList<Reponse>();
 	}
 	
 	public void addReponse(Reponse reponse){
@@ -19,11 +18,40 @@ public class Question {
 	}
 	
 	public boolean resultOf(ArrayList<String> liste){
-		return listReponses.containsAll(liste);
+		int tab[] = null;
+		tab=new int[liste.size()];
+		
+		//initialisation du tableau en O 
+		for(int i=0;i<liste.size();i++){
+			tab[i]=0;
+		}
+		//recherche des composants de "liste" dans "listReponses"
+		for(int i=0;i<liste.size();i++)
+		{
+			for(int j=0;j<listReponses.size();j++){
+				if(liste.get(i).equals(listReponses.get(j).getReponseText()) && 
+						listReponses.get(j).getReponseValue()){
+						tab[i]=1;
+				    }
+				
+			}
+		}
+		//vérification des composants
+		for(int i=0;i<liste.size();i++){
+			if(tab[i]==0)
+			return false;
+		}
+		return true;
 	}
 	
 	public boolean resultOf(String reponse){
-		return listReponses.contains(reponse);
+		for(int i=0;i<listReponses.size();i++)
+		{
+			if(reponse.equals(listReponses.get(i).getReponseText()))
+				if(listReponses.get(i).getReponseValue()==true)
+				return true;
+		}
+		return false;
 	}
 	
 	public int nbReponse(){

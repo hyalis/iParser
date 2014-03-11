@@ -41,21 +41,21 @@ public class QuestionTest extends TestCase {
 		ArrayList<String> listReponse=new ArrayList<String>();
 		listReponse.add("Le ciel");
 		listReponse.add("La mer");
-		assertEquals("Le ciel est une réponse correcte.", true, quizzSimple.resultOf(listReponse));
+		assertEquals("Le ciel est une réponse correcte.", true, quizzMultiple.resultOf(listReponse));
 	} 
 	
 	@Test
 	public void testReponseFausseMULTIPLE() {
 		ArrayList<String> listReponse=new ArrayList<String>();
 		listReponse.add("Le ciel");
-		assertEquals("Le ciel est une réponse fausse.", true, quizzSimple.resultOf(listReponse));
+		assertEquals("Le ciel est une réponse fausse.", true, quizzMultiple.resultOf(listReponse));
 	}
 	
 	@Test
 	public void testReponseFausseMULTIPLE2() {
 		ArrayList<String> listReponse=new ArrayList<String>();
-		listReponse.add("Le ciel");
-		assertEquals("De l'herbe est une réponse fausse.", false, quizzSimple.resultOf(listReponse));
+		listReponse.add("De l'herbe");
+		assertEquals("De l'herbe est une réponse fausse.", false, quizzMultiple.resultOf(listReponse));
 	}
 	
 	@Test
