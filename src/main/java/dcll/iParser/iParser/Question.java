@@ -9,8 +9,8 @@ public class Question {
 	private TypeQuestion type;
 	
 	public Question(String text,TypeQuestion type){
-		texte=text;
-		this.type=type;
+		texte = text;
+		this.type = type;
 	}
 	
 	public void addReponse(Reponse reponse){
@@ -65,5 +65,18 @@ public class Question {
 				nbrReponseCorrect++;
 		}
 		return nbrReponseCorrect;
+	}
+	
+	public String toString()
+	{
+		String str;
+		str = this.texte + " (Reponse " + this.type + ")\n";
+		
+		for(Reponse rep : this.listReponses)
+		{
+			str += "\t" + rep.getReponseText() + "(" + rep.getReponseValue() + ")\n";
+		}
+		
+		return str;
 	}
 }
