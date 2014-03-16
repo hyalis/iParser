@@ -79,4 +79,12 @@ public class Question {
 		
 		return str;
 	}
+	
+	public Reponse getIemeReponse(int i){
+		return listReponses.get(i);
+	}
+	
+	public String getQuestionText(){
+		return texte;
+	}
 }
