@@ -9,7 +9,6 @@ public class ReponseTest extends TestCase
 	
 	private Reponse reponse;
 	
-
 	protected void setUp() throws Exception {
 		super.setUp();
         this.reponse = new Reponse("Paris", true);

@@ -16,5 +16,4 @@ public class Reponse {
 	public boolean getReponseValue() {
 		return this.juste;
 	}
-
 }

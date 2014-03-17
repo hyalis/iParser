@@ -29,7 +29,7 @@ public class ParserTest extends TestCase{
 	
 	//Question Simple
 	public void testQuestionTexteSimple(){
-		assertEquals("Question = Qui est le président des États Unis? ","Qui est le président des États Unis?", questionSimple.getQuestionText());
+		assertEquals("Question = Qui est le président des États Unis? ", "Qui est le président des États Unis?", questionSimple.getQuestionText());
 	}
 	
 	public void test1emeReponseTexteSimple(){

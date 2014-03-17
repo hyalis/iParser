@@ -9,41 +9,31 @@ public class Question {
 	private TypeQuestion type;
 	
 	public Question(String text,TypeQuestion type){
-		texte = text;
+		this.texte = text;
 		this.type = type;
 	}
 	
 	public void addReponse(Reponse reponse){
-		listReponses.add(reponse);
+		this.listReponses.add(reponse);
 	}
 	
 	public boolean resultOf(ArrayList<String> liste){
-		int tab[] = null;
-		tab=new int[liste.size()];
-		
-		//initialisation du tableau en O 
-		for(int i=0;i<liste.size();i++){
-			tab[i]=0;
+		if(liste.size() == 0) return false;
+		boolean result = true;
+		for(String str : liste){
+			result = result && this.listReponses.get(this.getIndiceOf(str)).getReponseValue();
 		}
-		//recherche des composants de "liste" dans "listReponses"
-		for(int i=0;i<liste.size();i++)
-		{
-			for(int j=0;j<listReponses.size();j++){
-				if(liste.get(i).equals(listReponses.get(j).getReponseText()) && 
-						listReponses.get(j).getReponseValue()){
-						tab[i]=1;
-				    }
-				
-			}
-		}
-		//vérification des composants
-		for(int i=0;i<liste.size();i++){
-			if(tab[i]==0)
-			return false;
-		}
-		return true;
+		return result;
 	}
 	
+	private int getIndiceOf(String str) {
+		for(int i = 0; i < this.listReponses.size(); i++){
+			if(this.listReponses.get(i).getReponseText().equals(str))
+				return i;
+		}
+		return -1;
+	}
+
 	public boolean resultOf(String reponse){
 		for(int i=0;i<listReponses.size();i++)
 		{

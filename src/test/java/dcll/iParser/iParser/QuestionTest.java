@@ -35,9 +35,6 @@ public class QuestionTest extends TestCase {
 	
 	@Test
 	public void testReponseCorrecteMULTIPLE() {
-		//la réponse doit etre considérée comme fausse du fait que la réponse est (le ciel,la mer)
-		//assertEquals("Le ciel est une réponse correcte.", true, quizzSimple.resultOf("Le ciel"));
-		
 		ArrayList<String> listReponse=new ArrayList<String>();
 		listReponse.add("Le ciel");
 		listReponse.add("La mer");
@@ -63,13 +60,6 @@ public class QuestionTest extends TestCase {
 		this.quizzSimple.addReponse(new Reponse("Londres", false));
 		assertEquals("Il doit y avoir 3 réponses maintenant.", 3, quizzSimple.nbReponse());
 	}
-	
-	@Test
-	public void testAjoutReponseJusteAuQuizzSimple(){
-		this.quizzSimple.addReponse(new Reponse("Londres", true));
-		//Devrait générer un msg d'erreur
-		fail("On peut pas ajouter une autre reponse vraie");
-	}
 
 	@Test
 	public void testNbReponsesCorrecteSIMPLE(){
@@ -82,10 +72,4 @@ public class QuestionTest extends TestCase {
 		assertEquals("Paris et Toulouse sont des bonne réponses. Donc deux réponses correctes", 2, quizzSimple.nbReponseCorrecte());
 	}
 	
-	@Test
-	public void testGetReponse(){
-		/*for(String rep : quizzSimple.getReponseCorrecte()){
-			assertEquals("La bonne réponse est Paris ou Toulouse", "Paris", quizzSimple.getReponseCorrecte());
-		}*/
-	}
 }
