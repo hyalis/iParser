@@ -35,7 +35,7 @@ public class Question {
 	}
 
 	public boolean resultOf(String reponse){
-		for(int i=0;i<listReponses.size();i++)
+		for(int i=0; i<listReponses.size(); i++)
 		{
 			if(reponse.equals(listReponses.get(i).getReponseText()))
 				if(listReponses.get(i).getReponseValue()==true)
@@ -50,7 +50,7 @@ public class Question {
 
 	public int nbReponseCorrecte(){
 		int nbrReponseCorrect=0;
-		for(int i=0;i<listReponses.size();i++){
+		for(int i=0; i<listReponses.size(); i++){
 			if(listReponses.get(i).getReponseValue()==true)
 				nbrReponseCorrect++;
 		}
