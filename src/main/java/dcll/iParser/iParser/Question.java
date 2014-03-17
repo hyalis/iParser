@@ -64,7 +64,7 @@ public class Question {
 		
 		for(Reponse rep : this.listReponses)
 		{
-			str += "\t" + rep.getReponseText() + "(" + rep.getReponseValue() + ")\n";
+			str += "-> " + rep.getReponseText() + " (" + rep.getReponseValue() + ")\n";
 		}
 		
 		return str;
