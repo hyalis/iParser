@@ -18,7 +18,7 @@ public class ParserTest extends TestCase{
 								 "- Xi Jinping.\n";
 		questionSimple = parser.doIt(questionSimpleTexte);
 		
-		String questionMultipleTexte = "{Quels sont les coleur de feu rouge?\n"+
+		String questionMultipleTexte = "{Quelles sont les couleurs des feux tricolores ?\n"+
 				 "|type=\"[]\"}\n"+
 				 "+ rouge.\n"+
 				 "- bleu.\n"+
@@ -62,7 +62,7 @@ public class ParserTest extends TestCase{
 	
 	//Question Multiple
 	public void testQuestionTexteMultiple(){
-		assertEquals("Question = Quels sont les coleur de feu rouge?","Quels sont les coleur de feu rouge?", questionMultiple.getQuestionText());
+		assertEquals("Question = Quels sont les coleur de feu rouge?","Quelles sont les couleurs des feux tricolores ?", questionMultiple.getQuestionText());
 	}
 	
 	public void test1emeReponseTexteMultiple(){

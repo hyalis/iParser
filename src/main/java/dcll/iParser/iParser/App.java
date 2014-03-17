@@ -15,7 +15,14 @@ public class App
     			"|type=\"()\"}\n" +
     			"- Vrai.\n" +
     			"+ Faux.\n";
-    	Question q1 = p.doIt(str1);
+    	
+    	Question q1 = null;
+		try {
+			q1 = p.doIt(str1);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
     	System.out.println(q1.toString());
     	
     	String str2 = "{Sélectionnez les langages dynamiques\n" +
@@ -24,7 +31,13 @@ public class App
     			"- Java.\n" +
     			"+ Groovy.\n" +
     			"- Scala.\n";
-    	Question q2 = p.doIt(str2);
+    	Question q2 = null;
+		try {
+			q2 = p.doIt(str2);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	System.out.println(q2.toString());
     	
     }
