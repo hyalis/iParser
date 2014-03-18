@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.177" errors="0" skipped="0" tests="18" name="dcll.iParser.iParser.ParserTest">
+<testsuite failures="0" time="0.15" errors="0" skipped="0" tests="18" name="dcll.iParser.iParser.ParserTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_21\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
     <property name="net.sourceforge.cobertura.datafile" value="Z:\Projet_DCLL\iParser\target\cobertura\cobertura.ser"/>
-    <property name="classworlds.conf" value="Z:\Projet_DCLL\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7235873727023374145.tmp"/>
+    <property name="classworlds.conf" value="Z:\Projet_DCLL\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5849946125709538636.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Cobol\CobolIT\bin;C:\Program Files\OCaml\emacs-23.3\bin;C:\Tcl\bin;C:\Program Files\OCaml\bin;C:\Program Files\Java\jdk1.7.0_04\bin;C:\oracle\product\10.2.0\client_1\bin;C:\GNAT\BIN;C:\Windows\SYSTEM32;C:\Windows;C:\Windows\SYSTEM32\WBEM;C:\Windows\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;."/>
     <property name="debug" value="-e"/>
@@ -64,22 +64,22 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase time="0.064" classname="dcll.iParser.iParser.ParserTest" name="testQuestionTexteSimple"/>
+  <testcase time="0.056" classname="dcll.iParser.iParser.ParserTest" name="testIsQuestionSimple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testQuestionTexteSimple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test1emeReponseTexteSimple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature1emeReponseSimple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test2emeReponseSimple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature2emeReponseSimple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="test3emeReponseSimple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test3emeReponseSimple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature3emeReponseSimple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testQuestionTexteMultiple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test1emeReponseTexteMultiple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test2emeReponseMultiple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test3emeReponseMultiple"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test4emeReponseMultiple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testIsQuestionMultiple"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="test4emeReponseMultiple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testIsQuestionMultiple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature1emeReponseMultiple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature2emeReponseMultiple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature3emeReponseMultiple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature4emeReponseMultiple"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testIsQuestionSimple"/>
 </testsuite>

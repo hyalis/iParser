@@ -1,67 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="5.6">
 <file name="Z:\Projet_DCLL\iParser\src\main\java\dcll\iParser\iParser\App.java">
+<error line="3" column="8" severity="error" message="Unused import - java.util.ArrayList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 <error line="9" column="18" severity="error" message="&apos;{&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
 <error line="11" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="11" column="29" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
 <error line="11" column="42" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
 <error line="11" column="44" severity="error" message="&apos;{&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="16" column="72" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="17" column="35" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="18" column="29" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="22" column="13" severity="error" message="&apos;{&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="23" column="25" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="23" column="29" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="24" column="32" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="24" column="45" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="27" column="32" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="27" column="62" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="28" severity="error" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
-<error line="28" column="15" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="28" column="16" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="28" column="28" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="28" column="34" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="28" column="35" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="29" column="36" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="29" column="64" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="30" severity="error" message="&apos;else&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
-<error line="31" column="36" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="31" column="54" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="33" column="18" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="33" column="29" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="33" column="31" severity="error" message="&apos;{&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="42" column="65" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="43" column="35" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="44" column="32" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="45" column="29" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="46" column="31" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
-<error line="49" column="13" severity="error" message="&apos;{&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
-<error line="50" column="25" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="50" column="29" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="51" column="32" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="51" column="45" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="53" column="42" severity="error" message="&apos;=&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="53" column="43" severity="error" message="&apos;=&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="54" column="29" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="54" column="40" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="55" column="29" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="55" column="39" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="56" column="32" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="56" column="75" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="58" severity="error" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
-<error line="58" column="15" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="58" column="16" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="58" column="28" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="58" column="39" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="58" column="40" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="59" column="36" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="59" column="64" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="60" severity="error" message="&apos;else&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
-<error line="61" column="36" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="61" column="54" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="62" column="18" severity="error" message="&apos;(&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="62" column="29" severity="error" message="&apos;)&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
-<error line="62" column="31" severity="error" message="&apos;{&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="14" severity="error" message="Line is longer than 120 characters (found 121)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 <file name="Z:\Projet_DCLL\iParser\src\main\java\dcll\iParser\iParser\Parser.java">
 <error line="9" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
