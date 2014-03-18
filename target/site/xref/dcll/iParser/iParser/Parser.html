@@ -27,7 +27,7 @@
 <a class="jxr_linenumber" name="17" href="#17">17</a>  		String[] lignes = str.split( <span class="jxr_string">"\n"</span> ); <em class="jxr_comment">// Decoupage des lignes</em>
 <a class="jxr_linenumber" name="18" href="#18">18</a>  
 <a class="jxr_linenumber" name="19" href="#19">19</a>  		<em class="jxr_comment">// Recuperation de la question (on ommet le premier "{" )</em>
-<a class="jxr_linenumber" name="20" href="#20">20</a>  		String intituleQuestion = lignes[0].substring(1); 
+<a class="jxr_linenumber" name="20" href="#20">20</a>  		String intituleQuestion = lignes[0].substring( 1 ); 
 <a class="jxr_linenumber" name="21" href="#21">21</a>  		String typeQuestion = lignes[1]; <em class="jxr_comment">// Recuperation du type</em>
 <a class="jxr_linenumber" name="22" href="#22">22</a>  
 <a class="jxr_linenumber" name="23" href="#23">23</a>  		TypeQuestion type = <strong class="jxr_keyword">null</strong>;
@@ -50,10 +50,10 @@
 <a class="jxr_linenumber" name="40" href="#40">40</a>  		<strong class="jxr_keyword">for</strong> ( <strong class="jxr_keyword">int</strong> i = 2; i &lt; lignes.length; i++ ) 
 <a class="jxr_linenumber" name="41" href="#41">41</a>  		{
 <a class="jxr_linenumber" name="42" href="#42">42</a>  			String reponse = lignes[i]; <em class="jxr_comment">// On recup la reponse i</em>
-<a class="jxr_linenumber" name="43" href="#43">43</a>  			String textReponse = reponse.substring( reponse.indexOf(<span class="jxr_string">" "</span>) );
+<a class="jxr_linenumber" name="43" href="#43">43</a>  			String textReponse = reponse.substring( reponse.indexOf( <span class="jxr_string">" "</span> ) );
 <a class="jxr_linenumber" name="44" href="#44">44</a>  			textReponse = textReponse.trim( ); <em class="jxr_comment">// On enlève l'espace du debut</em>
 <a class="jxr_linenumber" name="45" href="#45">45</a>  
-<a class="jxr_linenumber" name="46" href="#46">46</a>  			<strong class="jxr_keyword">if</strong>( reponse.startsWith( <span class="jxr_string">"+"</span> ) )	
+<a class="jxr_linenumber" name="46" href="#46">46</a>  			<strong class="jxr_keyword">if</strong> ( reponse.startsWith( <span class="jxr_string">"+"</span> ) )	
 <a class="jxr_linenumber" name="47" href="#47">47</a>  			{
 <a class="jxr_linenumber" name="48" href="#48">48</a>  				<strong class="jxr_keyword">if</strong> ( type == TypeQuestion.SIMPLE &amp;&amp; nbReponsesTrue &gt;= 1 ) 
 <a class="jxr_linenumber" name="49" href="#49">49</a>  				{

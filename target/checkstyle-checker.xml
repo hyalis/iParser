@@ -73,7 +73,7 @@ under the License.
         </module>
 
         <module name="RightCurly">
-          <property name="option" value="alone"/>
+          <property name="option" value="same"/> <!--  MODIF: alone -> same -->
         </module>
 
         <module name="LineLength">

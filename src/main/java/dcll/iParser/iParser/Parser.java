@@ -40,10 +40,10 @@ public class Parser
 		for ( int i = 2; i < lignes.length; i++ ) 
 		{
 			String reponse = lignes[i]; // On recup la reponse i
-			String textReponse = reponse.substring( reponse.indexOf(" ") );
+			String textReponse = reponse.substring( reponse.indexOf( " " ) );
 			textReponse = textReponse.trim( ); // On enlève l'espace du debut
 
-			if( reponse.startsWith( "+" ) )	
+			if ( reponse.startsWith( "+" ) )	
 			{
 				if ( type == TypeQuestion.SIMPLE && nbReponsesTrue >= 1 ) 
 				{
