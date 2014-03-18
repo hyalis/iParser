@@ -2,60 +2,65 @@ package dcll.iParser.iParser;
 
 /**
  * @author leo
- * TODO: 
  */
-public class Parser {
+public class Parser 
+{
 
-	public Parser()
+	public Parser( )	
 	{
 	}
 
-	public Question doIt(String str) throws Exception
+	public Question doIt( final String str ) throws Exception 
 	{
 		int nbReponsesTrue = 0;
 
-		String[] lignes = str.split("\n"); // Decoupage des lignes
+		String[] lignes = str.split( "\n" ); // Decoupage des lignes
 
-		String intituleQuestion = lignes[0].substring(1); // Recuperation de la question (on ommet le premier "{" )
+		// Recuperation de la question (on ommet le premier "{" )
+		String intituleQuestion = lignes[0].substring( 1 ); 
 		String typeQuestion = lignes[1]; // Recuperation du type
 
 		TypeQuestion type = null;
 
 		// On récupère le type de la question
-		if (typeQuestion.contains("type=\"()\"")) {
+		if ( typeQuestion.contains( "type=\"()\"" ) ) 
+		{
 			type = TypeQuestion.SIMPLE;
-		} else if (typeQuestion.contains("type=\"[]\"")){
+		} else if ( typeQuestion.contains( "type=\"[]\"" ) ) 
+		{
 			type = TypeQuestion.MULTIPLE;
 		} else 
 		{
-			throw new Exception("ExpressionMalFormuleeException");
+			throw new Exception( "ExpressionMalFormuleeException" );
 		}
 
-		Question quiz = new Question(intituleQuestion, type);
+		Question quiz = new Question( intituleQuestion, type );
 
 		// Bouclage sur les réponses
-		for (int i = 2; i < lignes.length; i++ )
+		for ( int i = 2; i < lignes.length; i++ ) 
 		{
 			String reponse = lignes[i]; // On recup la reponse i
-			String textReponse = reponse.substring(reponse.indexOf(" "));
-			textReponse = textReponse.trim(); // On enlève l'espace du debut
+			String textReponse = reponse.substring( reponse.indexOf(" ") );
+			textReponse = textReponse.trim( ); // On enlève l'espace du debut
 
-			if(reponse.startsWith("+"))
+			if( reponse.startsWith( "+" ) )	
 			{
-				if (type == TypeQuestion.SIMPLE && nbReponsesTrue >= 1 )
+				if ( type == TypeQuestion.SIMPLE && nbReponsesTrue >= 1 ) 
 				{
-					throw new Exception("QuestionSimpleMaisMultipleReponseException");
+					throw new Exception( "QuestionSimpleMaisMultipleReponseException" );
 					// throw QuestionSimpleMaisMultipleReponseException
-				} else {
-					quiz.addReponse(new Reponse(textReponse, true));   //Ajout reponse true
+				} else 
+				{
+					quiz.addReponse( new Reponse( textReponse, true ) );   //Ajout reponse true
 					nbReponsesTrue++;    				
 				}
 
-			} else if (reponse.startsWith("-"))
+			} else if ( reponse.startsWith( "-" ) )	
 			{
-				quiz.addReponse(new Reponse(textReponse, false));    // Ajout reponse false
-			} else {
-				throw new Exception("ExpressionMalFormuleeException");
+				quiz.addReponse( new Reponse( textReponse, false ) );    // Ajout reponse false
+			} else 
+			{
+				throw new Exception( "ExpressionMalFormuleeException" );
 			}
 		}
 		return quiz;

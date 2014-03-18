@@ -26,9 +26,9 @@ under the License.
     <copyright>&#169;2014</copyright>
     <item>
       <title>File: 5,
-             Errors: 343,
-             Warnings: 0,
-             Infos: 0
+             Errors: 189,
+             Warnings: 16,
+             Infos: 2
       </title>
             <link>http://maven.apache.org/checkstyle.html</link>
       <description>
@@ -52,10 +52,10 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
+                  10
                 </td>
                 <td>
-                  162
+                  115
                 </td>
               </tr>
                           <tr>
@@ -66,10 +66,10 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
+                  2
                 </td>
                 <td>
-                  74
+                  10
                 </td>
               </tr>
                           <tr>
@@ -80,10 +80,10 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
+                  1
                 </td>
                 <td>
-                  77
+                  62
                 </td>
               </tr>
                           <tr>
@@ -91,13 +91,13 @@ under the License.
                   <a href="http://maven.apache.org/checkstyle.html#dcll.iParser.iParser.TypeQuestion.java">dcll/iParser/iParser/TypeQuestion.java</a>
                 </td>
                 <td>
-                  0
+                  2
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  6
+                  1
                 </td>
               </tr>
                           <tr>
@@ -108,10 +108,10 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
+                  3
                 </td>
                 <td>
-                  24
+                  1
                 </td>
               </tr>
                       </tbody>

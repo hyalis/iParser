@@ -6,11 +6,11 @@ import java.util.ArrayList;
  * Hello world!
  *
  */
-public class App 
-{
+public class App {
 
-	public static void main( String[] args )
-	{
+	public static void main(String[] args) {
+		
+		// TODO LE PROF A DIT PAS DE MAIN -_- !
 		Parser p = new Parser();
 
 		String str1 = "{La Suisse est membre de l'Union Européenne.\n" +

@@ -41,6 +41,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>2.11</version>
+				<configuration>
+					<configLocation>checkstyle_rules.xml</configLocation>
+				</configuration>
 				<reportSets>
 					<reportSet>
 						<reports>

@@ -1,3 +1,6 @@
 package dcll.iParser.iParser;
 
-public enum TypeQuestion {SIMPLE,MULTIPLE}
+public enum TypeQuestion 
+{
+	SIMPLE, MULTIPLE
+}
