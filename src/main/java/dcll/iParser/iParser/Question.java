@@ -26,7 +26,7 @@ public class Question {
 		return result;
 	}
 	
-	private int getIndiceOf(String str) {
+	public int getIndiceOf(String str) {
 		for(int i = 0; i < this.listReponses.size(); i++){
 			if(this.listReponses.get(i).getReponseText().equals(str))
 				return i;
@@ -59,15 +59,14 @@ public class Question {
 	
 	public String toString()
 	{
-		String str;
-		str = this.texte + " (Reponse " + this.type + ")\n";
 		
+		StringBuffer buf = new StringBuffer(); // Utilisation propre de StringBuffer
+		buf.append(this.texte + " (Reponse " + this.type + ")\n");
 		for(Reponse rep : this.listReponses)
 		{
-			str += "-> " + rep.getReponseText() + " (" + rep.getReponseValue() + ")\n";
+			buf.append("-> " + rep.getReponseText() + " (" + rep.getReponseValue() + ")\n");
 		}
-		
-		return str;
+		return buf.toString();
 	}
 	
 	public Reponse getIemeReponse(int i){
