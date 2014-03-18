@@ -11,6 +11,8 @@ public class App {
 	public static void main(String[] args) {
 		
 		// TODO LE PROF A DIT PAS DE MAIN -_- !
+		// Il m'as dit, tout ce qui pourrait se trouver dans le main est sensé être testé dans les TDD, donc pas de main.
+		/*
 		Parser p = new Parser();
 
 		String str1 = "{La Suisse est membre de l'Union Européenne.\n" +
@@ -62,7 +64,7 @@ public class App {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+*/
 
 
 
