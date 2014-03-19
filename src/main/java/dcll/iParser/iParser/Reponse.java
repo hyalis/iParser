@@ -10,25 +10,19 @@ package dcll.iParser.iParser;
  * </ul>
  * </p> 
  */
-public class Reponse 
-{
+public class Reponse {
 	/**
      * L'intitulé de la réponse
-     * 
      * @see Reponse#Reponse()
      * @see Reponse#getReponseText()
      */
 	private String texte;
-	
 	/**
      * Si la réponse est juste ou pas
-     * 
      * @see Reponse#Reponse()
      * @see Reponse#getReponseValue()
      */
 	private boolean juste;
-	
-	
 	/**
      * Constructeur Reponse.
      * 
@@ -40,33 +34,26 @@ public class Reponse
      * @see Reponse#texte
      * @see Reponse#juste
      */
-	public Reponse( String txt, boolean value ) 
-	{
+	public Reponse(String txt, boolean value) {
 		this.texte = txt;
 		this.juste = value;
 	}
 
 	/**
      * Retourne l'intitulé de la réponse.
-     * 
      * @return l'intitulé de la réponse.
-     * 
      * @see Reponse#texte
      */
-	public String getReponseText() 
-	{
+	public String getReponseText() {
 		return this.texte;
 	}
 
 	/**
      * Retourne la valeur de la réponse.
-     * 
      * @return la valeur de la réponse (true / false) 
-     * 
      * @see Reponse#juste
      */
-	public boolean getReponseValue() 
-	{
+	public boolean getReponseValue() {
 		return this.juste;
 	}
 }
