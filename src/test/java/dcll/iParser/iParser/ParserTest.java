@@ -9,7 +9,7 @@ public class ParserTest extends TestCase{
 	
 	protected void setUp() throws Exception{
 		super.setUp();
-		Parser parser = new Parser();
+		ParserV2 parser = new ParserV2();
 		
 		String questionSimpleTexte = "{Qui est le président des États Unis?\n"+
 								 "|type=\"()\"}\n"+
@@ -29,11 +29,15 @@ public class ParserTest extends TestCase{
 	
 	//Question Simple
 	public void testQuestionTexteSimple(){
-		assertEquals("Question = Qui est le président des États Unis? ", "Qui est le président des États Unis?", questionSimple.getQuestionText());
+		System.out.println("Qui est le président des États Unis?");
+		System.out.println(questionSimple.getQuestionText());
+		
+		
+		assertEquals("Question = Qui est le président des États Unis? ", "Qui est le président des États Unis?\n", questionSimple.getQuestionText());
 	}
 	
 	public void test1emeReponseTexteSimple(){
-		assertEquals("première réponse = \"Obama.\"","Obama.", questionSimple.getIemeReponse(0).getReponseText());
+		assertEquals("première réponse = \"Obama.\"","Obama", questionSimple.getIemeReponse(0).getReponseText());
 	}
 	
 	public void testNature1emeReponseSimple(){
@@ -41,7 +45,7 @@ public class ParserTest extends TestCase{
 	}
 	
 	public void test2emeReponseSimple(){
-		assertEquals("deuxième réponse = \"François Hollande.\"","François Hollande.", questionSimple.getIemeReponse(1).getReponseText());
+		assertEquals("deuxième réponse = \"François Hollande\"","François Hollande", questionSimple.getIemeReponse(1).getReponseText());
 	}
 	
 	public void testNature2emeReponseSimple(){
@@ -49,7 +53,7 @@ public class ParserTest extends TestCase{
 	}
 	
 	public void test3emeReponseSimple(){
-		assertEquals("troisième réponse = \"Xi Jinping.\"","Xi Jinping.", questionSimple.getIemeReponse(2).getReponseText());
+		assertEquals("troisième réponse = \"Xi Jinping.\"","Xi Jinping", questionSimple.getIemeReponse(2).getReponseText());
 	}
 	
 	public void testNature3emeReponseSimple(){
@@ -62,11 +66,11 @@ public class ParserTest extends TestCase{
 	
 	//Question Multiple
 	public void testQuestionTexteMultiple(){
-		assertEquals("Question = Quels sont les coleur de feu rouge?","Quelles sont les couleurs des feux tricolores ?", questionMultiple.getQuestionText());
+		assertEquals("Question = Quels sont les coleur de feu rouge?","Quelles sont les couleurs des feux tricolores ?\n", questionMultiple.getQuestionText());
 	}
 	
 	public void test1emeReponseTexteMultiple(){
-		assertEquals("première réponse = \"rouge.\"","rouge.", questionMultiple.getIemeReponse(0).getReponseText());
+		assertEquals("première réponse = \"rouge.\"","rouge", questionMultiple.getIemeReponse(0).getReponseText());
 	}
 	
 	public void testNature1emeReponseMultiple(){
@@ -74,7 +78,7 @@ public class ParserTest extends TestCase{
 	}
 	
 	public void test2emeReponseMultiple(){
-		assertEquals("deuxième réponse = \"bleu.\"","bleu.", questionMultiple.getIemeReponse(1).getReponseText());
+		assertEquals("deuxième réponse = \"bleu.\"","bleu", questionMultiple.getIemeReponse(1).getReponseText());
 	}
 	
 	public void testNature2emeReponseMultiple(){
@@ -82,7 +86,7 @@ public class ParserTest extends TestCase{
 	}
 	
 	public void test3emeReponseMultiple(){
-		assertEquals("troisième réponse = \"vert.\"","vert.", questionMultiple.getIemeReponse(2).getReponseText());
+		assertEquals("troisième réponse = \"vert.\"","vert", questionMultiple.getIemeReponse(2).getReponseText());
 	}
 	
 	public void testNature3emeReponseMultiple(){
@@ -90,7 +94,7 @@ public class ParserTest extends TestCase{
 	}
 	
 	public void test4emeReponseMultiple(){
-		assertEquals("troisième réponse = \"noir.\"","noir.", questionMultiple.getIemeReponse(3).getReponseText());
+		assertEquals("troisième réponse = \"noir.\"","noir", questionMultiple.getIemeReponse(3).getReponseText());
 	}
 	
 	public void testNature4emeReponseMultiple(){

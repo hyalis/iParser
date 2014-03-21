@@ -42,7 +42,7 @@ public class ParserV2 {
 					boolean valeur;
 					String rep = "";
 					if(str.charAt(pos) == '+' || str.charAt(pos) == '-'){
-						System.out.println(pos + " " + str.charAt(pos));
+						//System.out.println(pos + " " + str.charAt(pos));
 						if(str.charAt(pos) == '+')
 							valeur = true;
 						else
