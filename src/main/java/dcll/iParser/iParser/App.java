@@ -66,7 +66,18 @@ public class App {
 		}
 */
 
-
+		ParserV2 parseur = new ParserV2();
+		try {
+			parseur.doIt("{Sélectionnez les langages dynamiques" +
+							"|type=\"[]\"}     \n" +
+							"+ Clojure.                      \n" +
+							"- Java." +
+							"+    Groovy     ." +
+							"- Scala.");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 }
