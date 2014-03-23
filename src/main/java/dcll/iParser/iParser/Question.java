@@ -84,7 +84,7 @@ public class Question {
      * @see Reponse#getReponseValue()
      */
 	public boolean resultOf(ArrayList<String> liste) {
-		if(liste.size() == 0) {
+		if (liste.size() == 0) {
 			return false;
 		}
 		boolean result = true;
@@ -96,8 +96,8 @@ public class Question {
 		return result;
 	}
 
-	/**
-     * Retourne l'indice de la réponse passée en paramètre
+	/**.
+     * Retourne l'indice de la réponse passée en paramètre.
      *
      * @param str
      *            La réponse à chercher dans la liste
@@ -107,7 +107,7 @@ public class Question {
      */
 	public int getIndiceOf(String str) {
 		for (int i = 0; i < this.listReponses.size(); i++) {
-			if (this.listReponses.get(i).getReponseText().equals(str)) {
+				if (this.listReponses.get(i).getReponseText().equals(str)) {
 				return i;
 			}
 		}
