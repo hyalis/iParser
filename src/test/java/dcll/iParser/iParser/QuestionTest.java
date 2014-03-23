@@ -7,8 +7,7 @@ import junit.framework.TestCase;
 
 public class QuestionTest extends TestCase {
 
-	private Question quizzSimple;
-	private Question quizzMultiple;
+	private Question quizzSimple, quizzMultiple, quizz;
 	
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -21,6 +20,10 @@ public class QuestionTest extends TestCase {
 		this.quizzMultiple.addReponse(new Reponse("Le ciel", true));
 		this.quizzMultiple.addReponse(new Reponse("La mer", true));
 		this.quizzMultiple.addReponse(new Reponse("De l'herbe", false));
+		
+		this.quizz = new Question("Qui est le meilleur ?", TypeQuestion.SIMPLE);
+		this.quizz.addReponse(new Reponse("L'autre", false));
+		this.quizz.addReponse(new Reponse("Moi", true));
 	}
 	
 	@Test
@@ -71,5 +74,33 @@ public class QuestionTest extends TestCase {
 		this.quizzSimple.addReponse(new Reponse("Toulouse", true));
 		assertEquals("Paris et Toulouse sont des bonne réponses. Donc deux réponses correctes", 2, quizzSimple.nbReponseCorrecte());
 	}
+	
+	@Test
+	public void testtoString(){
+
+		String toStr = "Qui est le meilleur ? (Reponse SIMPLE)\n"
+				+"-> L'autre (false)\n"
+				+"-> Moi (true)\n";
+		assertEquals("Je suis le meilleur", toStr, this.quizz.toString());
+	}
+	
+	
+	@Test
+	public void testGetIndiceOfNormal(){
+		assertEquals("Renvoie 1, l'indice de \"Moi\"", 1, quizz.getIndiceOf("Moi"));
+	}
+	
+	@Test
+	public void testGetIndiceOfInconnu(){
+		assertEquals("Doit renvoyer -1 car ReponseInconnue n'existe pas", -1, quizz.getIndiceOf("ReponseInconnue"));
+	}
+	
+	@Test
+	public void testResultOfSizeZero(){
+		ArrayList<String> rep = new ArrayList<String>();
+		assertEquals("Je suis le meilleur", false, quizz.resultOf(rep));
+	}
+	
+
 	
 }
