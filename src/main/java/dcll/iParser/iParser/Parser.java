@@ -5,13 +5,6 @@ package dcll.iParser.iParser;
  * d'analyser la question (Sous forme de String)</b>
  */
 public class Parser {
-
-	/**.
-	 * Constructeur Parser()
-	 */
-	public Parser() {
-	}
-
 	/**.
      * La fonction doIt() est la fonction principal
      * qui permet d'analyser la chaine de caractère passé
@@ -25,53 +18,71 @@ public class Parser {
      *
      * @see Question
      * @see Reponse
-     * @throws Exception
      */
 	public Question doIt(final String str) throws Exception {
-		int nbReponsesTrue = 0;
-
-		String[] lignes = str.split("\n"); // Decoupage des lignes
-
-		// Recuperation de la question (on ommet le premier "{" )
-		String intituleQuestion = lignes[0].substring(1);
-		String typeQuestion = lignes[1]; // Recuperation du type
-
-		TypeQuestion type = null;
-
-		// On récupère le type de la question
-		if (typeQuestion.contains("type=\"()\"")) {
-			type = TypeQuestion.SIMPLE;
-		} else if (typeQuestion.contains("type=\"[]\"")) {
-			type = TypeQuestion.MULTIPLE;
-		} else {
-			throw new Exception("ExpressionMalFormuleeException");
+		int pos = 0;
+		String titre = "";
+		Etat etat = Etat.DEB;
+		Question quizz = null;
+		TypeQuestion type = TypeQuestion.SIMPLE;
+		Reponse reponse;
+		int nbBonneRep = 0;
+		if (str.charAt(0) != '{'){
+			throw new Exception("Pas d'accolade ouvrante en début de titre.");
 		}
-
-		Question quiz = new Question(intituleQuestion, type);
-
-		// Bouclage sur les réponses
-		for (int i = 2; i < lignes.length; i++) {
-			String reponse = lignes[i]; // On recup la reponse i
-			String textReponse = reponse.substring(reponse.indexOf(" "));
-			// On enlève l'espace du debut
-			textReponse = textReponse.trim();
-
-			if (reponse.startsWith("+")) {
-				if (type == TypeQuestion.SIMPLE
-						&& nbReponsesTrue >= 1) {
-				throw new Exception("QuestionSimpleMaisMultipleReponseException");
-				} else {
-					quiz.addReponse(new Reponse(textReponse, true));
-					nbReponsesTrue++;
-				}
-
-			} else if (reponse.startsWith("-")) {
-				quiz.addReponse(new Reponse(textReponse, false));
-			} else {
-				throw new Exception("ExpressionMalFormuleeException");
+		while (pos < str.length()) {
+			switch (etat) {
+				case DEB :
+					etat = Etat.TITRE;
+					break;
+				case TITRE :
+					while (str.charAt(pos) != '|') {
+						titre += str.charAt(pos);
+						pos++;
+					}
+					etat = Etat.TYPE;
+					break;
+				case TYPE :
+					if (str.substring(pos, pos + 9).equals("type=\"()\"")) {
+						type = TypeQuestion.SIMPLE;
+					} else if (str.substring(pos, pos + 9).equals("type=\"[]\"")) {
+						type = TypeQuestion.MULTIPLE;
+					} else {
+						throw new Exception("Pas de type à cette question.");
+					}
+					if (str.charAt(pos + 9) != '}') {
+						throw new Exception("Pas d'accolade fermante en fin de titre.");
+					}
+					pos += 9;
+					etat = Etat.REP;
+					quizz = new Question(titre, type);
+					break;
+				case REP :
+					boolean valeur;
+					String rep = "";
+					if(str.charAt(pos) == '+' || str.charAt(pos) == '-') {
+						if(str.charAt(pos) == '+'){
+							if(nbBonneRep > 0 && type == TypeQuestion.SIMPLE)
+								throw new Exception("Question simple mais réponses multiple.");
+							nbBonneRep++;
+							valeur = true;
+						} else {
+							valeur = false;
+						}
+						pos += 2;
+						while(str.charAt(pos) != '.') {
+							rep += str.charAt(pos);
+							pos++;
+						}
+						reponse = new Reponse(rep, valeur);
+						quizz.addReponse(reponse);
+						etat = Etat.REP;
+					}
+					break;
 			}
+			pos++;
 		}
-		return quiz;
+		System.out.println(quizz.toString());
+		return quizz;
 	}
-
 }

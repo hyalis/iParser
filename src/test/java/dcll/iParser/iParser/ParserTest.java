@@ -10,11 +10,16 @@ public class ParserTest extends TestCase{
 	
 	private Question questionSimple;
 	private Question questionMultiple;
+	private Parser parser;
 	
+	
+	@Rule
+	public ExpectedException exception = ExpectedException.none();
+
 	@Test
 	protected void setUp() throws Exception{
 		super.setUp();
-		ParserV2 parser = new ParserV2();
+		this.parser = new Parser();
 		
 		String questionSimpleTexte = "{Qui est le président des États Unis?\n"+
 								 "|type=\"()\"}\n"+
@@ -128,56 +133,76 @@ public class ParserTest extends TestCase{
 		assertEquals("Question a 2 réponses correctes",2,questionMultiple.nbReponseCorrecte());
 	}
 	
-	@Test (expected = Exception.class)
-	public void testEntree1lignException() throws Exception{
+	@Test
+	public void testEntree1lignException(){
 		String question = "hello";
-		Parser parser = new Parser();
-		parser.doIt(question);
+		try{
+			parser.doIt(question);
+		} catch(Exception e){
+			assertEquals("Question mal formée.","Pas d'accolade ouvrante en début de titre.",e.getMessage());
+		}
 	}
 	
 	@Test
-	public void testPasSignAvantReponseException() throws Exception{
+	public void testPasAccoladeFinTitreException(){
 		String question = "{Qui est le président des États Unis?\n"+
-				 "|type=\"()\"}\n"+
+				 "|type=\"()\"\n"+
 				 "+ Obama.\n"+
-				 "François Hollande.\n"+
+				 "+ François Hollande.\n"+
 				 "- Xi Jinping.\n";
-		Parser parser = new Parser();
-		parser.doIt(question);
+		try{		
+			parser.doIt(question);
+		} catch(Exception e){
+			assertEquals("Exception car pas d'accolade fermante.", "Pas d'accolade fermante en fin de titre.", e.getMessage());
+		}
 	}
 	
-	@Test(expected = Exception.class)
-	public void testPasEspaceSignReponseException() throws Exception{
-		String question = "{Qui est le président des États Unis?\n"+
-				 "|type=\"()\"}\n"+
-				 "+ Obama.\n"+
-				 "-François Hollande.\n"+
-				 "- Xi Jinping.\n";
-		Parser parser = new Parser();
-		parser.doIt(question);
-	}
-	
-	@Test(expected = Exception.class)
-	public void testPasAccolateException() throws Exception{
+	@Test
+	public void testPasAccolateException(){
 		String question = "Qui est le président des États Unis?\n"+
 				 "|type=\"()\"\n"+
 				 "+ Obama.\n"+
 				 "- François Hollande.\n"+
 				 "- Xi Jinping.\n";
-		Parser parser = new Parser();
-		parser.doIt(question);
+		try{
+			parser.doIt(question);
+		} catch(Exception e){
+			assertEquals("Exception car pas d'accolade ouvrante.", "Pas d'accolade ouvrante en début de titre.", e.getMessage());
+		}
 	}
 	
-	@Test(expected = Exception.class)
-	public void testPasTypeException() throws Exception{
+	@Test
+	public void testPasTypeException(){
 		String question = "{Qui est le président des États Unis?\n"+
 				 "|}\n"+
 				 "+ Obama.\n"+
 				 "- François Hollande.\n"+
 				 "- Xi Jinping.\n";
-		Parser parser = new Parser();
-		parser.doIt(question);
+		try{
+			parser.doIt(question);
+		} catch(Exception e){
+			assertEquals("Exception car pas de type.", "Pas de type à cette question.", e.getMessage());
+		}
 	}
+	
+	@Test
+	public void testRepMultipleQuestionSimpleException(){
+		String question = "{Qui est le président des États Unis?\n"+
+				 "|type=\"()\"}\n"+
+				 "+ Obama.\n"+
+				 "+ François Hollande.\n"+
+				 "- Xi Jinping.\n";
+		try{
+			parser.doIt(question);
+		} catch(Exception e){
+			assertEquals("Trop de bonnes réponses.", "Question simple mais réponses multiple.", e.getMessage());
+		}
+	}
+	
+	
+	
+	
+	
 	
 	
 }

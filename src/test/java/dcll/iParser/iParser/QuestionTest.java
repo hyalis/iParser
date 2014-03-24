@@ -101,6 +101,16 @@ public class QuestionTest extends TestCase {
 		assertEquals("Je suis le meilleur", false, quizz.resultOf(rep));
 	}
 	
+	@Test
+	public void testGetIeme(){
+		assertEquals("Le 2 ème de quizzMultiple est mer.", "La mer", quizzMultiple.getIemeReponse(2).getReponseText());
+	}
+	
+	@Test
+	public void testGetQuestionText(){
+		assertEquals("Le titre de la question est le bon.", "Qu'est ce qui est bleu ?", quizzMultiple.getQuestionText());
+	}
+	
 
 	
 }
