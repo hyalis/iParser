@@ -16,7 +16,8 @@ import java.util.ArrayList;
  * </p>
  * @see Reponse
  */
-public class Question {
+public class Question 
+{
     /**
      * L'intitulé de la question.
      * @see Question#getQuestionText()
@@ -49,7 +50,8 @@ public class Question {
      * @see Question#texte
      * @see Question#type
      */
-    public Question(String text, TypeQuestion typeQuestion) {
+    public Question( String text, TypeQuestion typeQuestion ) 
+    {
         this.texte = text;
         this.type = typeQuestion;
     }
@@ -61,8 +63,9 @@ public class Question {
      * @see Question#listReponses
      * @see Reponse
      */
-    public void addReponse(Reponse reponse) {
-        this.listReponses.add(reponse);
+    public void addReponse( Reponse reponse ) 
+    {
+        this.listReponses.add( reponse );
     }
 
     /**
@@ -75,14 +78,17 @@ public class Question {
      * @see Question#listReponses
      * @see Reponse#getReponseValue()
      */
-    public boolean resultOf(ArrayList<String> liste) {
-        if (liste.size() == 0) {
+    public boolean resultOf( ArrayList<String> liste ) 
+    {
+        if ( liste.size() == 0 ) 
+        {
             return false;
         }
         boolean result = true;
-        for (String str : liste) {
+        for ( String str : liste ) 
+        {
             result = result
-                    && this.listReponses.get(this.getIndiceOf(str))
+                    && this.listReponses.get( this.getIndiceOf( str ) )
                             .getReponseValue();
         }
         return result;
@@ -96,9 +102,12 @@ public class Question {
      *         trouvée)
      * @see Question#listReponses
      */
-    public int getIndiceOf(String str) {
-        for (int i = 0; i < this.listReponses.size(); i++) {
-            if (this.listReponses.get(i).getReponseText().equals(str)) {
+    public int getIndiceOf( String str ) 
+    {
+        for ( int i = 0; i < this.listReponses.size(); i++ )
+        {
+            if ( this.listReponses.get( i ).getReponseText().equals( str ) ) 
+            {
                 return i;
             }
         }
@@ -114,10 +123,14 @@ public class Question {
      * @see Reponse#getReponseValue()
      * @see Reponse#getReponseText()
      */
-    public boolean resultOf(String reponse) {
-        for (int i = 0; i < listReponses.size(); i++) {
-            if (reponse.equals(listReponses.get(i).getReponseText())) {
-                if (listReponses.get(i).getReponseValue()) {
+    public boolean resultOf( String reponse ) 
+    {
+        for ( int i = 0; i < listReponses.size(); i++ ) 
+        {
+            if ( reponse.equals( listReponses.get( i ).getReponseText() ) ) 
+            {
+                if ( listReponses.get( i ).getReponseValue() ) 
+                {
                     return true;
                 }
             }
@@ -130,7 +143,8 @@ public class Question {
      * @return le nombre de réponses
      * @see Question#listReponses
      */
-    public int nbReponse() {
+    public int nbReponse() 
+    {
         return listReponses.size();
     }
 
@@ -140,10 +154,13 @@ public class Question {
      * @see Question#listReponses
      * @see Reponse#getReponseValue()
      */
-    public int nbReponseCorrecte() {
+    public int nbReponseCorrecte() 
+    {
         int nbrReponseCorrect = 0;
-        for (int i = 0; i < listReponses.size(); i++) {
-            if (listReponses.get(i).getReponseValue()) {
+        for ( int i = 0; i < listReponses.size(); i++ ) 
+        {
+            if ( listReponses.get( i ).getReponseValue() ) 
+            {
                 nbrReponseCorrect++;
             }
         }
@@ -157,12 +174,14 @@ public class Question {
      * @see Reponse#getReponseValue()
      * @see Reponse#getReponseText()
      */
-    public String toString() {
+    public String toString() 
+    {
         StringBuffer buf = new StringBuffer();
-        buf.append(this.texte + " (Reponse " + this.type + ")\n");
-        for (Reponse rep : this.listReponses) {
-            buf.append("-> " + rep.getReponseText() + " ("
-                    + rep.getReponseValue() + ")\n");
+        buf.append( this.texte + " (Reponse " + this.type + ")\n" );
+        for ( Reponse rep : this.listReponses ) 
+        {
+            buf.append( "-> " + rep.getReponseText() + " ("
+                    + rep.getReponseValue() + ")\n" );
         }
         return buf.toString();
     }
@@ -174,8 +193,9 @@ public class Question {
      * @return la ième réponse
      * @see Question#listReponses
      */
-    public Reponse getIemeReponse(int i) {
-        return listReponses.get(i);
+    public Reponse getIemeReponse( int i ) 
+    {
+        return listReponses.get( i );
     }
 
     /**
@@ -183,7 +203,8 @@ public class Question {
      * @return l'intitulé de la question
      * @see Question#texte
      */
-    public String getQuestionText() {
+    public String getQuestionText() 
+    {
         return texte;
     }
 }
