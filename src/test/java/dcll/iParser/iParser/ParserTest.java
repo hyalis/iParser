@@ -40,10 +40,6 @@ public class ParserTest extends TestCase{
 	//Question Simple
 	@Test
 	public void testQuestionTexteSimple(){
-		System.out.println("Qui est le président des États Unis?");
-		System.out.println(questionSimple.getQuestionText());
-		
-		
 		assertEquals("Question = Qui est le président des États Unis? ", "Qui est le président des États Unis?\n", questionSimple.getQuestionText());
 	}
 	
