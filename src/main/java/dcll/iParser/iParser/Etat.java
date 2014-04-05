@@ -5,5 +5,23 @@ package dcll.iParser.iParser;
  */
 public enum Etat 
 {
-	DEB, TITRE, TYPE, REP
+    /**.
+     * Etat Début
+     */
+    DEB, 
+    
+    /**.
+     * Etat titre de question
+     */
+    TITRE, 
+    
+    /**.
+     * Etat type de quesiton
+     */
+    TYPE, 
+    
+    /**.
+     * Etat réponses de question
+     */
+    REP
 }

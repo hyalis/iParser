@@ -7,5 +7,13 @@ package dcll.iParser.iParser;
  */
 public enum TypeQuestion 
 {
-	SIMPLE, MULTIPLE
+    /**.
+     * Question avec un seul réponse vrai
+     */
+    SIMPLE, 
+    
+    /**.
+     * Question avec plusieur réponses vrais
+     */
+    MULTIPLE
 }

@@ -26,9 +26,9 @@ under the License.
     <copyright>&#169;2014</copyright>
     <item>
       <title>File: 7,
-             Errors: 88,
+             Errors: 0,
              Warnings: 3,
-             Infos: 6
+             Infos: 0
       </title>
             <link>http://maven.apache.org/checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@ under the License.
                   <a href="http://maven.apache.org/checkstyle.html#dcll.iParser.iParser.Etat.java">dcll/iParser/iParser/Etat.java</a>
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   0
@@ -83,7 +83,7 @@ under the License.
                   1
                 </td>
                 <td>
-                  88
+                  0
                 </td>
               </tr>
                           <tr>
@@ -105,7 +105,7 @@ under the License.
                   <a href="http://maven.apache.org/checkstyle.html#dcll.iParser.iParser.TypeQuestion.java">dcll/iParser/iParser/TypeQuestion.java</a>
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   0
