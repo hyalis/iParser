@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.077" errors="0" skipped="0" tests="23" name="dcll.iParser.iParser.ParserTest">
+<testsuite failures="0" time="0.226" errors="0" skipped="0" tests="23" name="dcll.iParser.iParser.ParserTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_40\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 8"/>
     <property name="net.sourceforge.cobertura.datafile" value="C:\Users\USER\git\iParser\target\cobertura\cobertura.ser"/>
-    <property name="classworlds.conf" value="C:\Users\USER\Documents\workspace-ggts-3.4.0.RELEASE\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8202812521491023675.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\USER\Documents\workspace-ggts-3.4.0.RELEASE\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7140980653391658332.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_40\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Users\USER\AppData\Local\Smartbar\Application\;C:\Users\USER\AppData\Local\Smartbar\Application\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -63,27 +63,27 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.02" classname="dcll.iParser.iParser.ParserTest" name="test1emeReponseTexteMultiple"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature2emeReponseMultiple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testNature3emeReponseMultiple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testNature1emeReponseSimple"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test3emeReponseSimple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="test1emeReponseTexteSimple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="test2emeReponseSimple"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test4emeReponseMultiple"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature4emeReponseMultiple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testNature1emeReponseMultiple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testIsQuestionMultiple"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testEntree1lignException"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testNature3emeReponseSimple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="test3emeReponseMultiple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testPasAccolateException"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testPasTypeException"/>
+  <testcase time="0.025" classname="dcll.iParser.iParser.ParserTest" name="testNature1emeReponseMultiple"/>
   <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testNature2emeReponseSimple"/>
-  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testQuestionTexteSimple"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testQuestionTexteMultiple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test3emeReponseMultiple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature1emeReponseSimple"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="test1emeReponseTexteSimple"/>
   <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testIsQuestionSimple"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="test1emeReponseTexteMultiple"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testEntree1lignException"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testNature2emeReponseMultiple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature3emeReponseSimple"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testQuestionTexteMultiple"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testPasTypeException"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test2emeReponseSimple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testIsQuestionMultiple"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testNature4emeReponseMultiple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testNature3emeReponseMultiple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testPasAccolateException"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="test4emeReponseMultiple"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testQuestionTexteSimple"/>
+  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="test3emeReponseSimple"/>
   <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="test2emeReponseMultiple"/>
+  <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testPasAccoladeFinTitreException"/>
   <testcase time="0.001" classname="dcll.iParser.iParser.ParserTest" name="testRepMultipleQuestionSimpleException"/>
-  <testcase time="0" classname="dcll.iParser.iParser.ParserTest" name="testPasAccoladeFinTitreException"/>
 </testsuite>

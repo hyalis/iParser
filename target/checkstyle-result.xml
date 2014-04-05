@@ -8,9 +8,6 @@
 <file name="C:\Users\USER\git\iParser\src\main\java\dcll\iParser\iParser\Parser.java">
 <error line="24" column="48" severity="warning" message="Expected @throws tag for &apos;Exception&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
-<file name="C:\Users\USER\git\iParser\src\main\java\dcll\iParser\iParser\ParserV2.java">
-<error line="22" column="48" severity="warning" message="Expected @throws tag for &apos;Exception&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-</file>
 <file name="C:\Users\USER\git\iParser\src\main\java\dcll\iParser\iParser\Question.java">
 </file>
 <file name="C:\Users\USER\git\iParser\src\main\java\dcll\iParser\iParser\Reponse.java">
