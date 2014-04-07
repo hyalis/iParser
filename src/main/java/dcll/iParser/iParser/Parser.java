@@ -25,6 +25,8 @@ public class Parser
 	{
 		int pos = 0;
 		String titre = "";
+		StringBuffer buftitre = new StringBuffer();
+		StringBuffer bufrep;
 		Etat etat = Etat.DEB;
 		Question quizz = null;
 		TypeQuestion type = TypeQuestion.SIMPLE;
@@ -44,9 +46,10 @@ public class Parser
 				case TITRE :
 					while ( str.charAt( pos ) != '|' ) 
 					{
-						titre += str.charAt( pos );
+						buftitre.append( str.charAt( pos ) );
 						pos++;
 					}
+					titre = buftitre.toString();
 					etat = Etat.TYPE;
 					break;
 				case TYPE :
@@ -71,6 +74,7 @@ public class Parser
 				case REP :
 					boolean valeur;
 					String rep = "";
+					bufrep = new StringBuffer();
 					if ( str.charAt( pos ) == '+' || str.charAt( pos ) == '-' ) 
 					{
 						if ( str.charAt( pos ) == '+' ) 
@@ -88,9 +92,10 @@ public class Parser
 						pos += 2;
 						while ( str.charAt( pos ) != '.' ) 
 						{
-							rep += str.charAt( pos );
+							bufrep.append( str.charAt( pos ) );
 							pos++;
 						}
+						rep = bufrep.toString();
 						reponse = new Reponse( rep, valeur );
 						quizz.addReponse( reponse );
 						etat = Etat.REP;
