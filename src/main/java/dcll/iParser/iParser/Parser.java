@@ -1,15 +1,15 @@
 package dcll.iParser.iParser;
 
-/**.
+/**
  * <b>Parser est la classe qui permet
  * d'analyser la question (Sous forme de String)</b>
  */
 public class Parser 
 {
-	/**.
-     * La fonction doIt() est la fonction principal
-     * qui permet d'analyser la chaine de caractère passé
-     * en paramètre et la retourne sous forme de "Question"
+	/**
+     * La fonction doIt() est la fonction principale
+     * qui permet d'analyser la chaine de caractère passée
+     * en paramètre et la retourne sous forme de "Question" remplie de Reponses
      *
      * @param str
      *       La chaine de caractère qui représente la question avec ses réponses

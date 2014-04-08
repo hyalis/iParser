@@ -24,7 +24,7 @@ public class Question
      */
     private String texte;
     /**
-     * . La liste des réponses proposées pour la question
+     * La liste des réponses proposées pour la question
      * @see Question#nbReponseCorrecte()
      * @see Question#addReponse()
      * @see Question#nbReponse()
@@ -69,7 +69,7 @@ public class Question
     }
 
     /**
-     * . Précise si la liste de réponses passées en paramètres sont des réponses
+     * Précise si la liste de réponses passées en paramètres sont des réponses
      * juste ou pas
      * @param liste
      *            La liste de réponses ( String ) à vérifier
@@ -95,7 +95,7 @@ public class Question
     }
 
     /**
-     * . Retourne l'indice de la réponse passée en paramètre.
+     * Retourne l'indice de la réponse passée en paramètre.
      * @param str
      *            La réponse à chercher dans la liste
      * @return l'indice de la réponse cherchée ( retourne -1 si réponse non
@@ -115,7 +115,7 @@ public class Question
     }
 
     /**
-     * . Précise si la réponse passée en paramètre est une réponse juste ou pas
+     * Précise si la réponse passée en paramètre est une réponse juste ou pas
      * @param reponse
      *            La réponse ( String ) à vérifier
      * @return True : si la réponse est vrai false : si la réponse est fausse
@@ -139,7 +139,7 @@ public class Question
     }
 
     /**
-     * . Retourne le nombre de réponses relative à cette question
+     * Retourne le nombre de réponses relative à cette question
      * @return le nombre de réponses
      * @see Question#listReponses
      */
@@ -149,7 +149,7 @@ public class Question
     }
 
     /**
-     * . Retourne le nombre de réponses justes relative à cette question
+     * Retourne le nombre de réponses justes relative à cette question
      * @return le nombre de réponses justes
      * @see Question#listReponses
      * @see Reponse#getReponseValue()
@@ -168,7 +168,7 @@ public class Question
     }
 
     /**
-     * . toString() Spécifie la forme d'écriture de la question
+     * toString() Spécifie la forme d'écriture de la question
      * @return la forme d'écriture de la question
      * @see Question#listReponses
      * @see Reponse#getReponseValue()
@@ -187,7 +187,7 @@ public class Question
     }
 
     /**
-     * . Retourne la ième réponse spécifié en paramètre.
+     * Retourne la ième réponse spécifié en paramètre.
      * @param i
      *            l'indice de la réponse à retourner.
      * @return la ième réponse
@@ -199,7 +199,7 @@ public class Question
     }
 
     /**
-     * . Retourne l'intitulé de cette question
+     * Retourne l'intitulé de cette question
      * @return l'intitulé de la question
      * @see Question#texte
      */
